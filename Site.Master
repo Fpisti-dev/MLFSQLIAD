@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MLFSQLIAD.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - ML for SQLIA Application</title>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="Scripts/bootstrap/css/bootstrap.css">
+    <link href="Scripts/DataTable/css/demo_table_jui.css" rel="stylesheet" />    
+    <link href="Scripts/DataTable/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Scripts/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="Scripts/Style.css" />
+
+
+    <script src="Scripts/jquery-3.4.1.js"></script>
+    <script src="Scripts/bootstrap/js/bootstrap.js"></script>
+    <script src="Scripts/DataTable/jquery.dataTables.min.js"></script>        
+    <script src="Scripts/DataTable/dataTables.buttons.min.js"></script>    
+    <script src="Scripts/DataTable/pdfmake.min.js"></script>
+    <script src="Scripts/DataTable/vfs_fonts.js"></script>            
+    <script src="Scripts/DataTable/buttons.html5.min.js"></script>
+    <script src="Scripts/DataTable/buttons.html5.min.js"></script>
+    <script src="Scripts/DataTable/buttons.print.min.js"></script>
+    <script src="Scripts/DataTable/date-euro.js"></script>
+    <script src="Scripts/loader.js"></script>
+
+</head>
+<body>
+    <form runat="server">
+
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        
+            <a class="navbar-brand" runat="server" href="~/">Machine Learning for SQL Injection Detection</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+      
+                <ul class="navbar-nav mr-auto">        
+                    <li class="nav-item">          
+                        <a class="nav-link" runat="server" href="~/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/Settings">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" runat="server" href="~/Reports">Reports</a>
+                    </li>
+                    <li class="nav-item">          
+                        <a class="nav-link" runat="server" href="~/Test">Test</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>        
+
+        <div class="container body-content" style="margin-top:4em">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - MLFSQLIAD ASP.NET Application, Istvan Franko</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
